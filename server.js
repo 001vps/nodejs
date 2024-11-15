@@ -1,13 +1,12 @@
-// server.js
 const http = require('http');
 
-const hostname = '0.0.0.0'; // 接收所有地址请求
-const port = process.env.PORT || 80;  // 使用环境变量 PORT
+const hostname = '127.0.0.1';
+const port = 3000;
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, World from Node.js without Express!');
+    res.end('Hello, World!\n');
 });
 
 server.listen(port, hostname, () => {
